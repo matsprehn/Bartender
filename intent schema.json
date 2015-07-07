@@ -1,0 +1,26 @@
+{
+  "intents": [
+    {
+      "intent": "BarTenderIngredients",
+      "slots" : [{
+          "name": "Drink",
+          "type": "LITERAL"
+        }]
+    },
+    {
+      "intent": "BarTenderDirections",
+      "slots" : [{
+          "name": "Drink",
+          "type": "LITERAL"
+        }]
+    },
+    {
+      "intent": "BarTenderIntent",
+      "slots" : [{
+          "name": "Drink",
+          "type": "LITERAL"
+        }]
+    }
+    ]
+}
+    

@@ -1,0 +1,20 @@
+# NOTE: even though all these say melon ball, we just take the literal words and stuff it into the search
+BarTenderDirections how do I make a {Melon Ball|Drink}
+BarTenderDirections how to make a {Melon Ball|Drink}
+BarTenderDirections how to make {Melon Ball|Drink}
+BarTenderDirections how do we make a {Melon Ball|Drink}
+BarTenderDirections tell me how to make a {Melon Ball|Drink}
+BarTenderDirections tell me how to make {Melon Ball|Drink}
+
+BarTenderIngredients what is a {Melon Ball|Drink}
+BarTenderIngredients what is in a {Melon Ball|Drink}
+BarTenderIngredients what do I need for {Melon Ball|Drink}
+BarTenderIngredients what do we need for {Melon Ball|Drink}
+BarTenderIngredients what do I need for a {Melon Ball|Drink}
+BarTenderIngredients what do we need for a {Melon Ball|Drink}
+BarTenderIngredients what ingredients go in a {Melon Ball|Drink}
+BarTenderIngredients what ingredients do in an {Melon Ball|Drink}
+BarTenderIngredients what ingredients do I need for {Melon Ball|Drink}
+BarTenderIngredients what ingredients do I need for a {Melon Ball|Drink}
+BarTenderIngredients what ingredients do we need for {Melon Ball|Drink}
+BarTenderIngredients what ingredients do we need for a {Melon Ball|Drink}
