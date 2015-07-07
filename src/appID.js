@@ -1,0 +1,1 @@
+module.exports.APPID="amzn1.echo-sdk-ams.app.[your-unique-value-here]";
