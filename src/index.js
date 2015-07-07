@@ -14,7 +14,7 @@
 /**
  * App ID for the skill
  */
-var APP_ID = "amzn1.echo-sdk-ams.app.754bc872-f780-4ee8-be1e-1d3391619d53"; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
+var APP_ID = require('./appID').APPID;
 
 /**
  * The AlexaSkill prototype and helper functions
