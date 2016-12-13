@@ -13,4 +13,4 @@ It uses the Alexa Skills Kit and Amazon Lambda
 * upload zip to Amazon Lambda
 
 ## How do I use this? ##
-Checkout the [Sample Utterances file](Sample Utterances.txt) to see how you can invoke this skill
+Checkout the [Sample Utterances file](src/Sample Utterances.txt) to see how you can invoke this skill
