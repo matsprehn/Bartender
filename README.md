@@ -11,3 +11,6 @@ It uses the Alexa Skills Kit and Amazon Lambda
 * modify appID.js to contain your Alexa Skill ID
 * cd into the src directory, and zip up all the contents.
 * upload zip to Amazon Lambda
+
+## How do I use this? ##
+Checkout the [Sample Utterances file](Sample Utterances.txt) to see how you can invoke this skill
