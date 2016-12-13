@@ -18,3 +18,6 @@ Ask "What's in ${drinkName}?" to get a list of ingredients in the drink
 Ask "How do I make ${drinkName}?" to get a set of instructions on making the drink  
 Ask "What is ${drinkName}?" to get a list of ingredients and the instructions on making the drink.  
 Checkout the [Sample Utterances file](SampleUtterances.txt) to see other ways to invoke this skill  
+
+# License #
+Licensed under the [Don't Be A Dick](LICENSE.md) public license
