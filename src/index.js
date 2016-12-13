@@ -46,7 +46,7 @@ BarTender.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest
 
 BarTender.prototype.intentHandlers = {
     // register custom intent handlers
-    BarTenderIntent: function (intent, session, response) {
+    BartenderIngredientsAndDirections: function (intent, session, response) {
         handleAllData(intent, session, response);
     },
 

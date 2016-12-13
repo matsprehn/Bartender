@@ -6,7 +6,6 @@ BarTenderDirections how do we make a {Melon Ball|Drink}
 BarTenderDirections tell me how to make a {Melon Ball|Drink}
 BarTenderDirections tell me how to make {Melon Ball|Drink}
 
-BarTenderIngredients what is a {Melon Ball|Drink}
 BarTenderIngredients what is in a {Melon Ball|Drink}
 BarTenderIngredients what do I need for {Melon Ball|Drink}
 BarTenderIngredients what do we need for {Melon Ball|Drink}
@@ -18,3 +17,6 @@ BarTenderIngredients what ingredients do I need for {Melon Ball|Drink}
 BarTenderIngredients what ingredients do I need for a {Melon Ball|Drink}
 BarTenderIngredients what ingredients do we need for {Melon Ball|Drink}
 BarTenderIngredients what ingredients do we need for a {Melon Ball|Drink}
+
+BartenderIngredientsAndDirections what is a {Melon Ball|Drink}
+BartenderIngredientsAndDirections tell me about {Melon Ball|Drink}

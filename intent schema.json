@@ -15,7 +15,7 @@
         }]
     },
     {
-      "intent": "BarTenderIntent",
+      "intent": "BartenderIngredientsAndDirections",
       "slots" : [{
           "name": "Drink",
           "type": "LITERAL"
