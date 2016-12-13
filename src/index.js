@@ -1,16 +1,3 @@
-// Alexa SDK for JavaScript v1.0.00
-// Copyright (c) 2014-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved. Use is subject to license terms.
-
-/**
- * This simple sample has no external dependencies or session management, and shows the most basic
- * example of how to create a Lambda function for handling Alexa Skill requests.
- *
- * Examples:
- * One-shot model:
- *  User: "Alexa, tell Greeter to say hello"
- *  Alexa: "Hello World!"
- */
-
 /**
  * App ID for the skill
  */
@@ -20,7 +7,6 @@ var APP_ID = require('./appID').APPID;
  * The AlexaSkill prototype and helper functions
  */
 var AlexaSkill = require('./AlexaSkill');
-var http = require('http');
 var request = require('request')
 
 var url = "http://cocktails.wikia.com/api/v1/"
@@ -30,13 +16,6 @@ var speechOptions = ["Then", "Next", "After"];
 
 
 
-
-/**
- * BarTender is a child of AlexaSkill.
- * To read more about inheritance in JavaScript, see the link below.
- *
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
- */
 var BarTender = function () {
     AlexaSkill.call(this, APP_ID);
 };
@@ -49,7 +28,6 @@ BarTender.prototype.constructor = BarTender;
 BarTender.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, session) {
     console.log("BarTender onSessionStarted requestId: " + sessionStartedRequest.requestId
         + ", sessionId: " + session.sessionId);
-// any initialization logic goes here
 };
     
 
@@ -70,13 +48,16 @@ BarTender.prototype.intentHandlers = {
     // register custom intent handlers
     BarTenderIntent: function (intent, session, response) {
         handleAllData(intent, session, response);
-     },
-     BarTenderIngredient: function (intent, session, response) {
+    },
+
+    BarTenderIngredients: function (intent, session, response) {
         handleGetIngredients(intent,session,response);
     },
+
     BarTenderDirections: function (intent, session, response) {
         handleGetInstructions(intent, session, response);
     },
+
     FinishIntent: function(intent, session, response) {
         handleWrapupEventRequest(intent,session,response);
     },
@@ -85,23 +66,26 @@ BarTender.prototype.intentHandlers = {
         response.ask("You can ask me how to make a drink!");
     }
 };
+
 // handler for getting everything
+// This means getting the ingredients list, as well as the instructions on how to make the drink
 function handleAllData(intent, session, response) {
     var search = searchUrl + encodeURIComponent(intent.slots.Drink.value);
     searchAndGetArticle(search, getAllData, session, response);
 }
 
-// handler for getting ingredient data
+// handler for getting the list of ingredients
 function handleGetIngredients(intent, session, response) {
     var search = searchUrl + encodeURIComponent(intent.slots.Drink.value);
     searchAndGetArticle(search, getIngredientData, session, response);
 }
 
-// handler for getting instructional data
+// handler for getting the instructions on making the drink
 function handleGetInstructions(intent, session, response) {
     var search = searchUrl + encodeURIComponent(intent.slots.Drink.value);
     searchAndGetArticle(search, getInstructionData, session, response);
 }
+
 
 function getIngredientData(body, session, response) {
     var name = body.sections[0].title + ".";
@@ -133,10 +117,10 @@ function getAllData(body, session, response) {
     response.tellWithCard(name + speechIngredients + speechDirections, "bartender", name + speechIngredients + speechDirections);
 }
 
-// performs a search for the drink article and returns the body of the article in  json format
+// performs a search for the drink article and returns the body of the article in json format
 // parameters: 
 // search - search url that includes the keyword(s) we are looking for
-// fn - the callback function that runs once we have obtained the article
+// callback - the callback function that runs once we have obtained the article
 // session - session object of the current context
 // response - alexaSkills object where we can write the response 
 function searchAndGetArticle(search, callback, session, response) {
@@ -156,6 +140,7 @@ function searchAndGetArticle(search, callback, session, response) {
 // parses out the ingredients part of the json body
 // parameters:
 // body - json representation of an article body
+// returns : parsed out, alexa readable list of ingredients
 function getIngredients(body) {
     var ingredients = body.sections[1].content[0].elements;
     var speechIngredients = "";
@@ -169,10 +154,11 @@ function getIngredients(body) {
 
 // parses out the direction part of the json body
 // parameters:
-// body - json representation of an article body
+// body - json representation of an article bodya
+// returns : parsed out, alexa readable list of directions
 function getDirections(body) {
     var directions = body.sections[2].content[0].elements;
-    var speechDirections = "";
+    var speechDirections = " ";
     for (i = 0; i < directions.length; i++ ){
         if (i == 0) {
             speechDirections += "First, ";
