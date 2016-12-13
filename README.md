@@ -14,4 +14,7 @@ It uses the Alexa Skills Kit and Amazon Lambda
 * upload zip to Amazon Lambda
 
 ## How do I use this? ##
-Checkout the [Sample Utterances file](SampleUtterances.txt) to see how you can invoke this skill
+Ask "What's in ${drinkName}?" to get a list of ingredients in the drink
+Ask "How do I make ${drinkName}?" to get a set of instructions on making the drink
+Ask "What is ${drinkName}?" to get a list of ingredients and the instructions on making the drink.
+Checkout the [Sample Utterances file](SampleUtterances.txt) to see other ways to invoke this skill
