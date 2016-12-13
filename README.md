@@ -5,6 +5,7 @@ It uses the Alexa Skills Kit and Amazon Lambda
 
 ## How do I get set up? ##
 
+* If you are unfamiliar with Alexa Skills, check out Amazon's [getting started guide](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/getting-started-guide)
 * After creating an Alexa Skill, add the text in *intent schema.json* to your intent schema
 * Add the text in *Sample Utterances.txt* to the Sample utterances
 * run `npm install request` under the src/ directory
@@ -13,4 +14,4 @@ It uses the Alexa Skills Kit and Amazon Lambda
 * upload zip to Amazon Lambda
 
 ## How do I use this? ##
-Checkout the [Sample Utterances file](Sample%20Utterances.txt) to see how you can invoke this skill
+Checkout the [Sample Utterances file](SampleUtterances.txt) to see how you can invoke this skill
